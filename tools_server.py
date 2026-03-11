@@ -64,8 +64,16 @@ async def generate_and_create_exercises(
         # Extract the text from the response
         response_text = response.content.text if response.content else ""
         
+        # Strip markdown code fences if present
+        cleaned = response_text.strip()
+        if cleaned.startswith("```"):
+            cleaned = cleaned.split("\n", 1)[-1]  # remove first line (```json or ```)
+        if cleaned.endswith("```"):
+            cleaned = cleaned.rsplit("```", 1)[0]
+        cleaned = cleaned.strip()
+        
         # Parse the generated JSON
-        exercises_data = json.loads(response_text)
+        exercises_data = json.loads(cleaned)
         
         # Store exercises
         exercises_db[level] = []

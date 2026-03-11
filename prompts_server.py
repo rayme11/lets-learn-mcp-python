@@ -19,7 +19,7 @@ def python_topics(level: str = "beginner") -> str:
         "advanced": "for someone with extensive programming experience",
     }
 
-    prompt = f"generate 5 Python topics {learning_levels[level]}, numbered from most fundamental to most complex. After listing the topics, ask if they'd like to try exercises for any topic (recommend starting with #1)."
+    prompt = f"generate 5 Python topics {learning_levels[level]}, numbered from most fundamental to the most complex. After listing the topics, ask if they'd like to try exercises for any topic (recommend starting with #1)."
 
     # Return a more direct prompt that's easier for the LLM to follow
     return prompt

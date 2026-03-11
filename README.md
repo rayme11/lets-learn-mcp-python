@@ -122,14 +122,17 @@ pip install uv
 ### 5. Create Virtual Environment
 
 ```bash
-# Using venv (recommended)
-python -m venv mcp-env
+# Pin Python version used by uv for this project
+uv python pin 3.13
+
+# Create the virtual environment
+uv venv --python 3.13 mpc-env
 
 # Activate on macOS/Linux
-source mcp-env/bin/activate
+source mpc-env/bin/activate
 
 # Activate on Windows
-mcp-env\Scripts\activate
+mpc-env\Scripts\activate
 ```
 
 ### 6. Install packages 

@@ -24,8 +24,15 @@ async def get_study_progress(username: str) -> str:
         with open(study_progress_file, 'r') as file:
             study_progress = json.load(file)
         
-        # Check if the username matches (for this simple example)
-        if study_progress.get("user_name") == username:
+        # Support both a list of users and a single-user object
+        if isinstance(study_progress, list):
+            for user in study_progress:
+                if user.get("user_name") == username:
+                    return json.dumps(user, indent=2)
+            return json.dumps({
+                "error": f"No study progress found for user '{username}'"
+            })
+        elif study_progress.get("user_name") == username:
             return json.dumps(study_progress, indent=2)
         else:
             return json.dumps({

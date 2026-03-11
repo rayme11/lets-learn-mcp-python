@@ -1,11 +1,26 @@
-{
-  "user_name": "Marlene",
-  "level": "beginner",
-  "completed_exercises": [
-    "Variables Practice"
-  ],
-  "current_streak": 0,
-  "total_exercises_attempted": 1,
-  "start_date": "2025-07-15T11:49:43.154429",
-  "achievements": []
-}
+[
+  {
+    "user_name": "Marlene",
+    "level": "beginner",
+    "completed_exercises": [
+      "Variables Practice"
+    ],
+    "current_streak": 0,
+    "total_exercises_attempted": 1,
+    "start_date": "2025-07-15T11:49:43.154429",
+    "achievements": []
+  },
+  {
+    "user_name": "Ray",
+    "level": "beginner",
+    "completed_exercises": [
+      "Variables Practice",
+      "Type Checking & Conversion",
+      "String Operations"
+    ],
+    "current_streak": 3,
+    "total_exercises_attempted": 3,
+    "start_date": "2026-03-01T09:00:00.000000",
+    "achievements": ["first_exercise", "three_in_a_row"]
+  }
+]

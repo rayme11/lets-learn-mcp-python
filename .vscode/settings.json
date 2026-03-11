@@ -1,0 +1,7 @@
+{
+    "chat.mcp.serverSampling": {
+        "lets-learn-mcp-python/.vscode/mcp.json: learnpython-mcp": {
+            "allowedDuringChat": true
+        }
+    }
+}
